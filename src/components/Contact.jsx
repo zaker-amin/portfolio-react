@@ -9,8 +9,7 @@ const Contact = () => {
       </h1>
       <div className="text-center py-2 tracking-tighter">
         <p className="my-4">{CONTACT.address}</p>
-        <p className="my-4">{CONTACT.phoneNo}</p>
-        <a href="#" className="underline">
+        <a href={`mailto:${CONTACT.email}`} className="underline">
           {CONTACT.email}
         </a>
         <div className="flex justify-center gap-5 my-9 text-2xl">

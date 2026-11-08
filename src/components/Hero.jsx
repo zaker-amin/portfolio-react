@@ -29,8 +29,8 @@ const Hero = () => {
               animate="visible"
               className="p-1 text-center lg:text-start bg-gradient-to-r from-pink-500 via-slate-500 to-purple-500  bg-clip-text text-transparent text-4xl tracking-tight "
             >
-              Full Stack Developer <br />
-              ML Engineer
+              Full-Stack Software Engineer <br />
+              Computer Vision Researcher
             </motion.span>
             <motion.p
               variants={container(0.6)}

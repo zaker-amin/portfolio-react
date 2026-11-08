@@ -1,7 +1,4 @@
 import React from "react"
-import aboutImg from "../assets/about.jpg"
-import { ABOUT_TEXT } from "../constants"
-import { motion } from "framer-motion"
 
 const PersonalAchievements = () => {
   return (
@@ -13,43 +10,46 @@ const PersonalAchievements = () => {
 
       <div className="flex flex-col max-w-3xl mx-auto text-lg space-y-6">
         <div>
-          <p className="font-semibold text-purple-600">Fitness:</p>
+          <p className="font-semibold text-purple-600">Academic Excellence:</p>
           <p>
-            Deadlift: 170kg | Bench Press: 120kg | 5km Run: 27 minutes | 3km
-            Run: 18 minutes
+            Graduated from Ankara University in Computer Engineering with a
+            3.83 GPA
           </p>
-          <hr className="my-4 border-neutral-900" />
-        </div>
-
-        <div>
-          <p className="font-semibold text-purple-600">Entrepreneurship:</p>
-          <p>Launched first business at age 16 – a local supermarket</p>
-          <hr className="my-4 border-neutral-900" />
-        </div>
-
-        <div>
-          <p className="font-semibold text-purple-600">Volunteer Work:</p>
-          <p>5 months teaching English and Python</p>
           <hr className="my-4 border-neutral-900" />
         </div>
 
         <div>
           <p className="font-semibold text-purple-600">Scholarships:</p>
           <p>
-            Private High School Scholarship
+            YTB Merit Scholarship – Master’s in Computer Engineering at Yıldız
+            Technical University
             <br />
-            YTB Undergraduate Scholarship - Bachelor's in Computer Engineering
+            YTB Undergraduate Scholarship – Bachelor’s in Computer Engineering
             at Ankara University
             <br />
-            YTB Merit Scholarship – Master’s Studies at Yıldız Technical
-            University
+            Private High School Scholarship
           </p>
           <hr className="my-4 border-neutral-900" />
         </div>
 
         <div>
-          <p className="font-semibold text-purple-600">Academic Excellence:</p>
-          <p>Graduated from Ankara University with 3.83 GPA</p>
+          <p className="font-semibold text-purple-600">Languages:</p>
+          <p>
+            English and Turkish (native level), Persian and Turkmen (native),
+            Uzbek, Pashto
+          </p>
+          <hr className="my-4 border-neutral-900" />
+        </div>
+
+        <div>
+          <p className="font-semibold text-purple-600">Entrepreneurship:</p>
+          <p>Launched my first business at 16: a local supermarket</p>
+          <hr className="my-4 border-neutral-900" />
+        </div>
+
+        <div>
+          <p className="font-semibold text-purple-600">Volunteer Work:</p>
+          <p>5 months teaching English and Python</p>
         </div>
       </div>
     </div>

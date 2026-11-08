@@ -1,25 +1,50 @@
 import project1 from "../assets/projects/project-1.jpg"
 import project2 from "../assets/projects/project-2.jpg"
-import project3 from "../assets/projects/project-3.jpg"
 import project4 from "../assets/projects/project-4.jpg"
 import project5 from "../assets/projects/project-5.jpg"
 import project6 from "../assets/projects/project-6.jpg"
 import project7 from "../assets/projects/confusion_matrix.png"
-import project8 from "../assets/projects/project-8.jpg"
 import project9 from "../assets/projects/project-9.jpg"
 
-export const HERO_CONTENT = `Hi! I’m Zaker, a Master’s student in Computer Engineering at Yıldız Technical Univeristy with a passion for web and mobile development, machine learning, and AI. I’ve built projects ranging from full-stack web apps to Android accessibility tools, and I enjoy turning ideas into functional, real-world applications.`
+export const HERO_CONTENT = `Hi! I’m Zaker, a full-stack software engineer in İstanbul. At Mayrix I work on Givergy.com, a fundraising platform for charities, building backend services in Java and front ends in Next.js. I’m also doing a Master’s in Computer Engineering at Yıldız Technical University, researching domain adaptation for deep learning models.`
 
-export const ABOUT_TEXT = `Graduated from Ankara University, I specialize in web and mobile development, and machine learning. My work spans full-stack MERN applications, Flutter apps, and deep learning research. I enjoy learning new technologies and applying them to solve practical problems. I am proficient in JavaScript, Python, Dart, and Java, and I have experience with React, Next.js, Flutter, and cloud deployment.`
+export const ABOUT_TEXT = `I graduated from Ankara University in Computer Engineering with a 3.83 GPA. I work across backend and front end: Java (Dropwizard), PostgreSQL and Redis on the server, Next.js, React and TypeScript in the browser, and Docker and Kubernetes for deployment. My research is in deep learning for computer vision.`
 
 export const EXPERIENCES = [
+  {
+    year: "Sep 2025 – Present",
+    role: "Software Engineer",
+    company: "Mayrix, İstanbul",
+    description: [
+      "Full-stack work on Givergy.com, a fundraising platform for charity events, auctions and donations.",
+      "Built an identity provider that gives each user one profile across regions and campaigns, with OAuth 2.0 sign-in through Google, Facebook and Apple, SSO, and multi-factor authentication by authenticator-app TOTP or SMS and email codes through Twilio.",
+      "Contributed to integrating Ryft as a second payment provider alongside Stripe, with Apple Pay and Google Pay, and to recurring donations on Ryft.",
+      "Contributed to migrating the organiser CMS from Backbone.js to Next.js.",
+      "Set up Docker, Kubernetes and GitHub Actions deployment for new services.",
+    ],
+    technologies: [
+      "Java",
+      "Dropwizard",
+      "PostgreSQL",
+      "Redis",
+      "Next.js",
+      "TypeScript",
+      "Docker",
+      "Kubernetes",
+    ],
+  },
+  {
+    year: "Dec 2024 – Mar 2025",
+    role: "Online Machine Learning Course Instructor (Volunteer)",
+    company: "UNDP ICPSD, İstanbul (Remote)",
+    description: `Ran live Python sessions on data structures, web scraping and databases, and helped students through the practical exercises.`,
+    technologies: ["Python", "pandas", "BeautifulSoup"],
+  },
   {
     year: "Feb 2024 – Aug 2024",
     role: "Data Scientist & API Developer",
     company: "EmlakRaporum, Ankara",
-    description: `Managed end-to-end data workflows for a real estate evaluation startup: collection, processing, visualization.
-Developed APIs using FastAPI to serve interactive Plotly visualizations integrated into the website.
-Deployed and optimized the system with Docker on AWS EC2, ensuring scalable and reliable operation.`,
+    description: `Built the data collection and processing pipeline for a real estate evaluation startup, with FastAPI APIs serving interactive Plotly charts to the website. Deployed it in Docker on AWS EC2. It cut the time to collect data and create charts by 40%.`,
     technologies: [
       "Python",
       "pandas",
@@ -34,124 +59,103 @@ Deployed and optimized the system with Docker on AWS EC2, ensuring scalable and 
     year: "Jul 2023 – Sep 2023",
     role: "Data Analyst Intern",
     company: "ORSAM, Ankara",
-    description: `Developed Python modules for text processing, data visualization, and analytics.Preprocessed Latin texts and applied text postprocessing to generate word clouds (unigrams/bigrams) for Arabic and English texts.Performed tweet frequency, attitude distribution, geographic analysis, and hashtag usage insights.`,
+    description: `Wrote Python modules for text processing, data visualisation and analytics that cut project completion time by 20%. Preprocessed Latin-script texts and built unigram and bigram word clouds for Arabic and English texts. Analysed tweets for frequency, attitude, geography and hashtag use.`,
     technologies: ["Python", "pandas", "matplotlib", "seaborn", "NLP"],
   },
   {
-    year: "Dec 2024 – Mar 2025",
-    role: "Online Machine Learning Course Teaching Support (Volunteer)",
-    company: "UNDP ICPSD, İstanbul",
-    description: `Conducted live Python sessions covering data structures, web scraping, and database operations.Assisted students in practical exercises, demonstrating programming concepts and problem-solving techniques.`,
-    technologies: ["Python", "Pandas", "BeautifulSoup"],
+    year: "2024 – Present",
+    role: "English Instructor (Part-time)",
+    company: "Everest SAT",
+    description: `Tutor students for the SAT, now through online classes.`,
+    technologies: ["English"],
   },
   {
-    year: "2024 - Present",
-    role: "Other Experience",
-    company: "English Instructor",
-    description: `Everest SAT: Provided part-time tutoring for SAT preparation, enhancing communication and mentoring skills. Conducting online classes at the moment`,
-    technologies: ["English"],
+    year: "Jul 2022 – Aug 2023",
+    role: "Medical Interpreter, English–Dari",
+    company: "Smart Lingo 360",
+    description: [
+      "Simultaneous interpreting between English and Dari (Persian) for the Department of Human Services, hospitals, schools and day cares.",
+    ],
+    technologies: ["English", "Dari (Persian)"],
   },
 ]
 
 export const PROJECTS = [
   {
-    title: "BookHive",
-    image: project1,
-    description:
-      "A full-stack MERN web application that connects readers with free books via the  Gutendex API. Users can browse and search for books, download them in different formats, mark favorite books, and leave reviews with ratings.",
-    technologies: [
-      "HTML",
-      "CSS",
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Redux",
-      "REST API",
-      "Express",
-    ],
-
-    url: "https://bookhive-edu.vercel.app/",
-  },
-  {
-    title:
-      "Research Project - Classifying Abnormal Sperm Morphologies Using Deep Learning: An Ensemble Approach on Hi-Lab Sperm Morphology Dataset ",
+    title: "Deep Learning for Sperm Morphology Classification",
     image: project7,
     description:
-      "Designed and implemented an ensemble deep learning model using EfficientNetB4, EfficientNetB6, and Xception to classify 18 sperm morphology types (1 normal, 17 abnormal) from low-resolution microscopic images. Applied advanced preprocessing and augmentation techniques to increase model robustness and achieved an average accuracy of ~69.2%, F1-score of ~68.4%, and demonstrated a 5% improvement over individual models using ensemble averaging.",
+      "An ensemble of EfficientNet-B4, EfficientNet-B6 and Xception that classifies 18 sperm morphology types (1 normal, 17 abnormal) from low-resolution microscope images in the Hi-LabSpermMorpho dataset (Aktas et al., IEEE Access, 2024). Preprocessing and augmentation on 5,000+ images made the models more robust. The ensemble reached ~69.2% accuracy and ~68.4% F1-score, 5% better than the individual models.",
     technologies: [
       "Python",
-      "Jupyter Notebook",
-      "torch",
-      "sklearn",
-      "numpy",
+      "PyTorch",
+      "scikit-learn",
+      "NumPy",
       "matplotlib",
+      "Jupyter",
     ],
-    url: "https://github.com/Zakerous76/dl-sperm-classification",
+    // The project repo is private, so the card links to the dataset paper.
+    url: "https://doi.org/10.1109/ACCESS.2024.3521643",
   },
   {
     title: "Opinion Mining on Web Reviews",
     image: project2,
     description:
-      "Developed a sentiment analysis system using machine learning to classify Yelp user reviews into positive, negative, or neutral categories. Designed three sentiment classification pipelines: binary (positive/negative), ternary (positive/neutral/negative), and 1–5-star rating prediction. ",
-    technologies: ["Python", "sklearn", "Yelp-Reviews-Dataset", "Streamlit"],
+      "A sentiment analysis system for Yelp reviews, with three pipelines: positive/negative, positive/neutral/negative, and 1–5 star prediction. It reaches a 97% F1-score on the binary task and 80% on the three-class task. Try it in the Streamlit demo.",
+    technologies: ["Python", "scikit-learn", "pandas", "TF-IDF", "Streamlit"],
     url: "https://yelp-rev-sentiment-analysis.streamlit.app/",
   },
-
+  {
+    title: "BookHive",
+    image: project1,
+    description:
+      "A full-stack MERN web app that connects readers with free books through the Gutendex API. Users can browse, search and download books in different formats, mark favourites, and leave reviews with ratings.",
+    technologies: [
+      "React",
+      "Redux",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST API",
+      "MUI",
+    ],
+    url: "https://bookhive-edu.vercel.app/",
+  },
   {
     title: "PicToSpeech",
     image: project4,
     description:
-      "An Android app that helps visually impaired users understand English and Turkish texts in images. Used Google’s ML Kit for character recognition and TTS libraries for speech synthesis. Extracted context from text using Gemini LLM API.",
-    technologies: ["Java", "Android Studio", "Google's ML Kit", "Gemini API"],
-    url: "https://github.com/Zakerous76/PicToSpeech",
+      "An Android app that helps visually impaired users understand English and Turkish text in images. It uses Google’s ML Kit for text recognition, the Gemini API to extract context, and text-to-speech to read it aloud, with 95% recognition accuracy and a 3-second average response time.",
+    technologies: ["Java", "Android Studio", "Google ML Kit", "Gemini API"],
+    url: "https://github.com/zaker-amin/PicToSpeech",
+  },
+  {
+    title: "PromptLand",
+    image: project6,
+    description:
+      "A Next.js web app for sharing and discovering creative prompts. Users sign in with Google through NextAuth, then create, search and share prompts stored in MongoDB Atlas. Hosted on Vercel.",
+    technologies: ["Next.js", "React", "NextAuth", "MongoDB", "Tailwind CSS"],
+    url: "https://prompt-land-xi.vercel.app/",
   },
   {
     title: "MyFitWizz: Fitness App",
     image: project5,
     description:
-      "A cross-platform fitness app built using Flutter and Firebase. Features include secure registration and authentication, customizable user profiles, exercise dashboard, RPE and BMI calculators, and workout timers.",
-
+      "A cross-platform fitness app built with Flutter and Firebase. Features include secure registration and authentication, customisable user profiles, an exercise dashboard, RPE and BMI calculators, and workout timers.",
     technologies: ["Dart", "Flutter", "Firebase"],
-    url: "https://github.com/Zakerous76/myfitwizz",
+    url: "https://github.com/zaker-amin/myfitwizz",
   },
-  {
-    title: "Helka Company Landing Page (Incomplete)",
-    image: project8,
-    description:
-      "The repository accessed by clicking this card contains a partially completed landing page for Helka. The project was originally intended to create a modern, interactive website for the company, but the project was later discontinued.",
-    technologies: ["Javascript", "NextJS"],
-    url: "https://github.com/Zakerous76/helka-react",
-  },
-
   {
     title: "Real Estate Dashboard Plot API",
     image: project9,
     description:
-      "A FastAPI web application that provides interactive Plotly charts for real estate sales, population statistics, and weather data. All charts are served as self-contained HTML, allowing them to be viewed directly in the browser without any additional frontend setup. Optionally, the application can be easily adapted to serve JSON data for integration with custom frontend frameworks or dashboards.",
-    technologies: ["Python", "FastAPI", "Plotly", "Numpy"],
-    url: "https://github.com/Zakerous76/analythings-viz-2-fastAPI-integration/tree/before_refactoring",
-  },
-
-  {
-    title: "PromptLand",
-    image: project6,
-    description:
-      "A cross-platform fitness app built using Flutter and Firebase. Features include secure registration and authentication, customizable user profiles, exercise dashboard, RPE and BMI calculators, and workout timers.",
-
-    technologies: ["Dart", "Flutter", "Firebase"],
-    url: "https://prompt-land-xi.vercel.app/",
-  },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["Javascript", "NextJS"],
-    url: "/",
+      "A FastAPI app that serves interactive Plotly charts for real estate sales, population statistics and weather data. Charts are served as self-contained HTML, so they open directly in the browser with no frontend setup, and the app can be switched to serve JSON for a custom dashboard.",
+    technologies: ["Python", "FastAPI", "Plotly", "NumPy"],
+    url: "https://github.com/zaker-amin/analythings-viz-2-fastAPI-integration/tree/before_refactoring",
   },
 ]
 
 export const CONTACT = {
-  address: "Fatih, İstanbul - Türkiye",
-  email: "mzhamin7@gmail.com",
+  address: "İstanbul, Türkiye",
+  email: "mzakeramin@gmail.com",
 }

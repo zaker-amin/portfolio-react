@@ -18,10 +18,22 @@ const Experience = () => {
                 {exp.role} -{" "}
                 <span className="text-sm text-purple-100">{exp.company}</span>
               </h6>
-              <p className="flex mb-4 text-neutral-400">{exp.description}</p>
+              {/* A description is either a paragraph or a list of bullet points. */}
+              {Array.isArray(exp.description) ? (
+                <ul className="mb-4 list-disc space-y-1 pl-5 text-neutral-400">
+                  {exp.description.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="flex mb-4 text-neutral-400">{exp.description}</p>
+              )}
               <span className="flex flex-wrap">
                 {exp.technologies.map((tech, ind) => (
-                  <span className="mr-2 mt-4 bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500">
+                  <span
+                    key={ind}
+                    className="mr-2 mt-4 bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500"
+                  >
                     {tech}
                   </span>
                 ))}
